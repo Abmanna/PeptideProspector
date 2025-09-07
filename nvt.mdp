@@ -1,0 +1,4 @@
+integrator = md
+nsteps = 50000
+tc-grps = Protein Water_and_ions
+ref_t = 300 300

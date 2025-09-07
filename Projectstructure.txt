@@ -1,0 +1,36 @@
+molecular_simulation_app/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── app.py                          # Main FastAPI + Gradio application
+├── backend/
+│   ├── __init__.py
+│   ├── models.py                  # SQLAlchemy models
+│   ├── database.py                # Database connection and session management
+│   ├── simulation.py              # Docking and MD simulation logic
+│   ├── worker.py                  # Background job processing with Redis
+│   └── api.py                     # FastAPI routes
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── components/
+│   │   │   ├── JobWizard.tsx
+│   │   │   ├── JobStatus.tsx
+│   │   │   └── ResultsViewer.tsx
+│   │   ├── hooks/
+│   │   │   └── useUpload.ts
+│   │   ├── services/
+│   │   │   └── api.ts
+│   │   ├── types/
+│   │   │   └── Job.ts
+│   │   └── index.tsx
+│   ├── package.json
+│   └── vite.config.ts
+├── uploads/                        # Directory for uploaded files
+├── results/                        # Directory for simulation outputs
+└── mdp/                            # GROMACS MDP files
+    ├── ions.mdp
+    ├── em.mdp
+    ├── nvt.mdp
+    ├── npt.mdp
+    └── md.mdp
